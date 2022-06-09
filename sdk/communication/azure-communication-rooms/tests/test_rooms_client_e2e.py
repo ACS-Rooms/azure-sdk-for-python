@@ -51,7 +51,6 @@ class RoomsClientTest(CommunicationTestCase):
             self.connection_str)
         self.users = {
             "john" : RoomParticipant(identifier=self.identity_client.create_user().properties["id"], role_name='Presenter'),
-            "fred" : RoomParticipant(identifier=self.identity_client.create_user().properties["id"], role_name='Organizer'),
             "chris" : RoomParticipant(identifier=self.identity_client.create_user().properties["id"], role_name='Attendee')
         }
         self.rooms_client = RoomsClient.from_connection_string(
